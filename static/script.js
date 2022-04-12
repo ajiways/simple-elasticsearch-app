@@ -25,7 +25,7 @@ function debounce(cb, duration) {
 }
 
 function search(searchValue) {
-  fetch(`http://localhost:3000/search?search=${searchValue}`, { method: 'GET' })
+  fetch(`/search?search=${searchValue}`, { method: 'GET' })
     .then((response) => {
       return response.json();
     })
