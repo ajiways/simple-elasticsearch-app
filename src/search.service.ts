@@ -57,10 +57,14 @@ export class SearchService {
   }
 
   addProduct(data: CreateProductDto) {
-    this.elasticSearchService.create({
+    return this.elasticSearchService.create({
       id: v4(),
       index: 'products',
       document: data,
     });
+  }
+
+  removeProduct(data: { id: string }) {
+    this.elasticSearchService.delete({ index: 'products', id: data.id });
   }
 }

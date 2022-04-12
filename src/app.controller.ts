@@ -4,6 +4,7 @@ import {
   Get,
   Post,
   Query,
+  Render,
   UsePipes,
   ValidationPipe,
 } from '@nestjs/common';
@@ -21,7 +22,18 @@ export class AppController {
 
   @Post('add')
   @UsePipes(new ValidationPipe())
-  addTest(@Body() data: CreateProductDto): void {
+  addTest(@Body() data: CreateProductDto) {
     return this.searchService.addProduct(data);
+  }
+
+  @Post('delete')
+  deleteProduct(@Body() data: { id: string }) {
+    return this.searchService.removeProduct(data);
+  }
+
+  @Get()
+  @Render('index')
+  root() {
+    return;
   }
 }
