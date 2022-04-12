@@ -1,0 +1,36 @@
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <title>Products</title>
+    <link rel='stylesheet' href='mini-default.min.css' />
+    <link rel='stylesheet' href='styles.css' />
+  </head>
+
+  <body>
+
+    <div class='row'>
+      <form autocomplete='off'>
+        <div class='row'>
+          <div class='col-sm-12 col-md-6 search__container'>
+            <input type='text' id='search' placeholder='Search here' />
+            <div class='suggestions'>
+              <div class='row'>
+                <span class='do_you_mean col-sm-12'>Возможно, вы имели в виду:</span>
+              </div>
+              <div class='row'>
+                <ul class='suggestions__items'>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class='row products'>
+    </div>
+
+    <script src='script.js'></script>
+  </body>
+</html>
